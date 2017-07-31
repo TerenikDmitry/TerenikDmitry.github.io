@@ -3,8 +3,18 @@ html {
 	line-height: 1.5;
 }
 
+body {
+	width: 60vw;
+	margin: auto;
+}
+
 @media screen and (orientation: portrait) {
 	html {
 		font-size: 2vh;
+	}
+
+	body {
+		width: 90vw;		
+		margin: auto;
 	}
 }
