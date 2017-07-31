@@ -1,7 +1,7 @@
 html {
 	font-size: 2.5vh;
-	line-height: 1.5;
 	font-family: sans-serif;
+	line-height: 1.5;
 	--lite-grey: #B0B0B0;
 }
 
@@ -17,31 +17,38 @@ header {
 }
 
 nav {
-	text-align: right;
+	font-size: 4vh;
+
+	display: flex;
+	justify-content: space-between;
+}
+nav>div.menu {
+	display: flex;
+}
+nav>div.menu>a {
+	margin-left: 2vh;
 }
 nav a {
 	text-decoration: none;
+
 	transition: all ease .3s;
+
+	border-bottom: 1px solid white;
 	color: #313131;
-	margin-left: 2vh;
-}
-nav a:first-child {
-	margin-left: 0;
 }
 nav a:hover {
 	border-bottom: 1px solid #4F86C6;
 	color: #4F86C6;
 }
-nav>h1 {
-	display: inline-block;
-	font-weight: normal;
-	margin: 0;
-	float: left;
-}
-nav>a, nav>h1 {
-	font-size: 4vh;
+
+main {
+	margin-bottom: 10vh;
 }
 
+footer {
+	border-top: 1px solid var(--lite-grey);
+	padding-top: 2vh; 
+}
 
 @media screen and (orientation: portrait) {
 	html {
@@ -53,7 +60,7 @@ nav>a, nav>h1 {
 		margin: auto;
 	}
 
-	nav>a, nav>h1 {
+	nav a {
 		font-size: 2.5vh;
 	}
 }
