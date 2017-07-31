@@ -48,6 +48,7 @@ nav a:hover {
 
 main {
 	margin-bottom: 10vh;
+	font-size: 3vh;
 }
 
 footer {
@@ -57,12 +58,16 @@ footer {
 
 @media screen and (orientation: portrait) {
 	html {
-		font-size: 1.8vh;
+		font-size: 2vh;
 	}
 
 	body {
 		width: 90vw;		
 		margin: auto;
+	}
+
+	main {
+		font-size: 2.5vh;
 	}
 
 	nav a {
