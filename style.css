@@ -3,11 +3,20 @@ html {
 	font-family: sans-serif;
 	line-height: 1.5;
 	--lite-grey: #B0B0B0;
+	--link-color: #4F86C6;
 }
 
 body {
 	width: 60vw;
 	margin: auto;
+}
+
+a{
+	text-decoration: none;
+	color: #313131;
+}
+a:hover {
+	color: var(--link-color);
 }
 
 header {
@@ -29,16 +38,12 @@ nav>div.menu>a {
 	margin-left: 2vh;
 }
 nav a {
-	text-decoration: none;
-
 	transition: all ease .3s;
 
 	border-bottom: 1px solid white;
-	color: #313131;
 }
 nav a:hover {
-	border-bottom: 1px solid #4F86C6;
-	color: #4F86C6;
+	border-bottom: 1px solid var(--link-color);
 }
 
 main {
