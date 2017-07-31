@@ -1,6 +1,8 @@
 html {
 	font-size: 2.5vh;
 	line-height: 1.5;
+	font-family: sans-serif;
+	--lite-grey: #B0B0B0;
 }
 
 body {
@@ -8,16 +10,27 @@ body {
 	margin: auto;
 }
 
-header{
-	margin-top: 2vh;
+header {
+	margin-top: 3vh;
+	margin-bottom: 10vh;
+	color: var(--lite-grey);
 }
 
-nav{
+nav {
 	text-align: right;
 }
-
-nav>a, nav>h1{
-	font-size: 4vh;
+nav a {
+	text-decoration: none;
+	transition: all ease .3s;
+	color: #313131;
+	margin-left: 2vh;
+}
+nav a:first-child {
+	margin-left: 0;
+}
+nav a:hover {
+	border-bottom: 1px solid #4F86C6;
+	color: #4F86C6;
 }
 nav>h1 {
 	display: inline-block;
@@ -25,6 +38,10 @@ nav>h1 {
 	margin: 0;
 	float: left;
 }
+nav>a, nav>h1 {
+	font-size: 4vh;
+}
+
 
 @media screen and (orientation: portrait) {
 	html {
@@ -36,7 +53,7 @@ nav>h1 {
 		margin: auto;
 	}
 
-	nav>a, nav>h1{
+	nav>a, nav>h1 {
 		font-size: 2.5vh;
 	}
 }
