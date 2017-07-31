@@ -1,5 +1,5 @@
 html {
-	font-size: 3vh;
+	font-size: 2.5vh;
 	line-height: 1.5;
 }
 
@@ -8,13 +8,35 @@ body {
 	margin: auto;
 }
 
+header{
+	margin-top: 2vh;
+}
+
+nav{
+	text-align: right;
+}
+
+nav>a, nav>h1{
+	font-size: 4vh;
+}
+nav>h1 {
+	display: inline-block;
+	font-weight: normal;
+	margin: 0;
+	float: left;
+}
+
 @media screen and (orientation: portrait) {
 	html {
-		font-size: 2vh;
+		font-size: 1.8vh;
 	}
 
 	body {
 		width: 90vw;		
 		margin: auto;
+	}
+
+	nav>a, nav>h1{
+		font-size: 2.5vh;
 	}
 }
