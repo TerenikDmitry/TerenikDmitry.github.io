@@ -1,0 +1,10 @@
+html {
+	font-size: 3vh;
+	line-height: 1.5;
+}
+
+@media screen and (orientation: portrait) {
+	html {
+		font-size: 2vh;
+	}
+}
