@@ -46,6 +46,11 @@ nav a:hover {
 	border-bottom: 1px solid var(--link-color);
 }
 
+.contacts-link{
+	color: var(--link-color);
+	border-bottom: 1px solid var(--link-color);
+}
+
 main {
 	margin-bottom: 10vh;
 	font-size: 3vh;
