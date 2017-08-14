@@ -53,7 +53,7 @@ main {
 
 footer {
 	border-top: 1px solid var(--lite-grey);
-	padding-top: 2vh; 
+	padding: 5vh 0; 
 }
 
 @media screen and (orientation: portrait) {
