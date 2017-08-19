@@ -5,12 +5,10 @@ html {
 	--lite-grey: #B0B0B0;
 	--link-color: #4F86C6;
 }
-
 body {
 	width: 60vw;
 	margin: auto;
 }
-
 a{
 	text-decoration: none;
 	color: #313131;
@@ -18,16 +16,22 @@ a{
 a:hover {
 	color: var(--link-color);
 }
-
-header {
-	margin-top: 3vh;
-	margin-bottom: 10vh;
-	color: var(--lite-grey);
+p {
+	margin: 0 0 .5rem 0;
 }
 
-nav {
-	font-size: 4vh;
 
+
+header {
+	font-size: 1rem;
+	margin-top: 3vh;
+	margin-bottom: 10vh;
+}
+header>div {
+	color: var(--lite-grey);
+}
+nav {
+	font-size: 1.7rem;
 	display: flex;
 	justify-content: space-between;
 }
@@ -39,33 +43,42 @@ nav>div.menu>a {
 }
 nav a {
 	transition: all ease .3s;
-
 	border-bottom: 1px solid white;
 }
 nav a:hover {
 	border-bottom: 1px solid var(--link-color);
 }
 
-.contacts-link{
-	color: var(--link-color);
-	border-bottom: 1px solid var(--link-color);
-}
+
 
 main {
 	margin-bottom: 10vh;
-	font-size: 3vh;
+	font-size: 1.3rem;
 }
 .post-date {
+	font-size: 1rem;
 	padding: 1vh;
 	display: inline-block;
 	background-color: var(--link-color);
 	color: white;
 }
+.post-text {
+	margin: .5rem 0 2rem 0;
+}
+.contacts-link{
+	color: var(--link-color);
+	border-bottom: 1px solid var(--link-color);
+}
+
+
 
 footer {
+	font-size: 1rem;
 	border-top: 1px solid var(--lite-grey);
 	padding: 5vh 0; 
 }
+
+
 
 @media screen and (orientation: portrait) {
 	html {
@@ -77,11 +90,11 @@ footer {
 		margin: auto;
 	}
 
-	main {
-		font-size: 2.5vh;
+	nav {
+		font-size: 1.4rem;
 	}
 
-	nav a {
-		font-size: 2.5vh;
+	main, footer{
+		font-size: 1.2rem;
 	}
 }
