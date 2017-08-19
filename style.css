@@ -55,6 +55,12 @@ main {
 	margin-bottom: 10vh;
 	font-size: 3vh;
 }
+.post-date {
+	padding: 1vh;
+	display: inline-block;
+	background-color: var(--link-color);
+	color: white;
+}
 
 footer {
 	border-top: 1px solid var(--lite-grey);
