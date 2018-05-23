@@ -1,0 +1,29 @@
+#root{
+	width: 1200px;
+	margin: 0 auto;
+	height: 100vh;
+}
+
+
+.mdc-layout-grid__inner, .dekor, #main-diagram, .content{
+	height: 100%;
+}
+
+.mdc-layout-grid{
+	height: 100vh;
+	padding: 7vh 0;
+}
+
+#settings{
+	padding: 0 1rem 8px;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.mdc-layout-grid__inner div{
+	overflow: auto;
+}
