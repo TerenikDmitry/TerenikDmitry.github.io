@@ -5,17 +5,19 @@ let options;
 // create a network
 let container = document.getElementById('main-diagram');
 
-let icon_server = '\uf233';
-let icon_storage = '\uf0a0';
-let icon_cloud = '\uf0c2';
+let icon_server = '\uf327';
+let icon_server2 = '\uf369';
+let icon_storage = '\uf429';
+let icon_storage2 = '\uf180';
+let icon_cloud = '\uf2c9';
 let icon_inbox = '\uf01c';
-let icon_user = '\uf007';
+let icon_user = '\uf2d6';
 
 let options_start = {
 	nodes: {
 		shape: 'icon',
 		icon: {
-			face: 'FontAwesome',
+			face: 'Ionicons',
 			code: icon_server,
 			size: 35,
 		},
@@ -58,13 +60,13 @@ let options_start = {
 			color: '#e91349',
 			icon: {
 				color: '#e91349',
-				face: 'FontAwesome',
+				face: 'Ionicons',
 				code: icon_user,
 			}
 		},
 		storage: {
 			icon: {
-				face: 'FontAwesome',
+				face: 'Ionicons',
 				code: icon_storage,
 			}
 		},
@@ -72,7 +74,7 @@ let options_start = {
 			color: '#c00071',
 			icon: {
 				color: '#c00071',
-				face: 'FontAwesome',
+				face: 'Ionicons',
 				code: icon_inbox,
 			}
 		}
@@ -97,6 +99,7 @@ let options_start = {
 		width: 1.1
 	}
 };
+
 
 
 let form_mode_structure = document.querySelector('#mode-structure');
