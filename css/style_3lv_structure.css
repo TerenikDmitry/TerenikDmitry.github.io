@@ -11,6 +11,15 @@
 	padding: 0 1rem;
 }
 
+@media only screen and (orientation: portrait) {
+	mdc-layout-grid__cell{
+		height: 45vh;
+	}
+	.mdc-layout-grid{
+		padding: 0;
+	}
+}
+
 form{
 	display: flex;
 	flex-direction: column;
