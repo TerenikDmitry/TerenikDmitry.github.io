@@ -80,8 +80,7 @@ let options_start = {
 		}
 	},
 	interaction: {
-		dragNodes: false,
-		dragView: false
+		dragNodes: false
 	},
 	edges: {
 		arrows: {
