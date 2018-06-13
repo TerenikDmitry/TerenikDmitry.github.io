@@ -1,200 +1,182 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="utf-8">
-		<title>3lv-dss-simulator</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/material-components-web.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style_3lv_structure.css">
-		<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
-		<script src="js/material-components-web.min.js"></script>
-		<script src="js/vis.min.js"></script>
-		<link rel="icon" href="./favicon.ico">
-	</head>
-	<body class="mdc-typography" id="root" onload="main()">
-		<div class="content">
-			<div class="mdc-layout-grid">
-				<div class="mdc-layout-grid__inner">
-					<div class="mdc-layout-grid__cell--span-9 mdc-elevation--z8">
-						<div id="main-diagram"></div>
-					</div>
-					<div class="mdc-layout-grid__cell--span-3 mdc-elevation--z8">
-						<div id="settings">
-							<h1 class="mdc-typography--headline6">Настройки</h1>
+<head>
+	<meta charset="utf-8">
+	<title>3lv-dss-simulator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/material-components-web.min.css">
+	<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style_3lv_structure.css">
+	<script src="js/material-components-web.min.js"></script>
+	<script src="js/vis.min.js"></script>
+	<link rel="icon" href="./favicon.ico">
+</head>
+<body class="mdc-typography" id="root" onload="main()">
+	<div class="mdc-layout-grid">
+		<div class="mdc-layout-grid__inner">
+			<div class="mdc-layout-grid__cell--span-8 mdc-elevation--z8">
+				<div id="main-diagram"></div>
+			</div>
+					
+			<div class="mdc-layout-grid__cell--span-4 mdc-elevation--z8">
+				<div id="settings">
+					<h1 class="mdc-typography--headline6">Настройки</h1>
 
-							<form id="level">
-								<div class="mdc-form-field">
-									<div class="mdc-checkbox">
-										<input type="checkbox"
-											class="mdc-checkbox__native-control"
-											id="checkbox-level-1" />
-										<div class="mdc-checkbox__background">
-											<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-												<path class="mdc-checkbox__checkmark-path"
-													fill="none"
-													stroke="white"
-													d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-											</svg>
-										</div>
-									</div>
-									<label for="checkbox-level-1">del Level-1</label>
+					<form id="level">
+						<div class="mdc-form-field">
+							<div class="mdc-checkbox">
+								<input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-level-1">
+								<div class="mdc-checkbox__background">
+									<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+										<path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+									</svg>
 								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-checkbox">
-										<input type="checkbox" class="mdc-checkbox__native-control"
-											id="checkbox-level-2" />
-										<div class="mdc-checkbox__background">
-											<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-												<path class="mdc-checkbox__checkmark-path"
-													fill="none"
-													stroke="white"
-													d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-											</svg>
-										</div>
-									</div>
-									<label for="checkbox-level-2">del Level-2</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-checkbox">
-										<input type="checkbox"
-											class="mdc-checkbox__native-control"
-											id="checkbox-level-3-all" />
-										<div class="mdc-checkbox__background">
-											<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-												<path class="mdc-checkbox__checkmark-path"
-													fill="none"
-													stroke="white"
-													d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-											</svg>
-										</div>
-									</div>
-									<label for="checkbox-level-3-all">del Level-3 (all)</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-checkbox">
-										<input type="checkbox"
-											class="mdc-checkbox__native-control"
-											id="checkbox-level-3-selectively" />
-										<div class="mdc-checkbox__background">
-											<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-												<path class="mdc-checkbox__checkmark-path"
-													fill="none"
-													stroke="white"
-													d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-											</svg>
-										</div>
-									</div>
-									<label for="checkbox-level-3-selectively">del Level-3 (selectively)</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-checkbox">
-										<input type="checkbox"
-											class="mdc-checkbox__native-control"
-											id="checkbox-level-middleware" />
-										<div class="mdc-checkbox__background">
-											<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-												<path class="mdc-checkbox__checkmark-path"
-													fill="none"
-													stroke="white"
-													d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-											</svg>
-										</div>
-									</div>
-									<label for="checkbox-level-middleware">middleware</label>
-								</div>
-							</form>
-							<hr>
-							<form id="mode">
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-1" name="radios" checked>
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-1">Storage</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-2" name="radios">
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-2">Cloude</label>
-								</div>
-							</form>
-							<hr>
-							<form id="mode-structure">
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-structure-1" name="radios" checked>
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-structure-1">Structure 1</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-structure-2" name="radios">
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-structure-2">Structure 2</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-structure-3" name="radios">
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-structure-3">Structure 3</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-structure-4" name="radios">
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-structure-4">Structure 4</label>
-								</div>
-								<div class="mdc-form-field">
-									<div class="mdc-radio">
-										<input class="mdc-radio__native-control" type="radio" id="mode-structure-5" name="radios">
-										<div class="mdc-radio__background">
-											<div class="mdc-radio__outer-circle"></div>
-											<div class="mdc-radio__inner-circle"></div>
-										</div>
-									</div>
-									<label for="mode-structure-5">Structure 5</label>
-								</div>
-							</form>
-							<hr>
-							<h1 class="mdc-typography--headline6">Саправка</h1>
-							<div class="mdc-typography--body1">
-								<i class="fa fa-cloud fa-lg" aria-hidden="true"></i> - Облачный сервис
 							</div>
-							<div class="mdc-typography--body1">
-								<i class="fa fa-hdd-o fa-lg" aria-hidden="true"></i> - База данных
-							</div>
-							<div class="mdc-typography--body1">
-								<i class="fa fa-server fa-lg" aria-hidden="true"></i> - Вычислительный модуль (СППР)
-							</div>
+							<label for="checkbox-level-1">del Level-1</label>
 						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-checkbox">
+								<input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-level-2">
+								<div class="mdc-checkbox__background">
+									<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+										<path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+									</svg>
+								</div>
+							</div>
+							<label for="checkbox-level-2">del Level-2</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-checkbox">
+								<input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-level-3-all">
+								<div class="mdc-checkbox__background">
+									<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+										<path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+									</svg>
+								</div>
+							</div>
+							<label for="checkbox-level-3-all">del Level-3 (all)</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-checkbox">
+								<input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-level-3-selectively">
+								<div class="mdc-checkbox__background">
+									<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+										<path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+									</svg>
+								</div>
+							</div>
+							<label for="checkbox-level-3-selectively">del Level-3 (selectively)</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-checkbox">
+								<input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-level-middleware">
+								<div class="mdc-checkbox__background">
+									<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+										<path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+									</svg>
+								</div>
+							</div>
+							<label for="checkbox-level-middleware">middleware</label>
+						</div>
+					</form>
+
+					<hr>
+							
+					<form id="mode">
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-1" name="radios" checked>
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-1">Storage</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-2" name="radios">
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-2">Cloude</label>
+						</div>
+					</form>
+							
+					<hr>
+							
+					<form id="mode-structure">
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-structure-1" name="radios" checked>
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-structure-1">Structure 1</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-structure-2" name="radios">
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-structure-2">Structure 2</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-structure-3" name="radios">
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-structure-3">Structure 3</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-structure-4" name="radios">
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-structure-4">Structure 4</label>
+						</div>
+						<div class="mdc-form-field">
+							<div class="mdc-radio">
+								<input class="mdc-radio__native-control" type="radio" id="mode-structure-5" name="radios" >
+								<div class="mdc-radio__background">
+									<div class="mdc-radio__outer-circle"></div>
+									<div class="mdc-radio__inner-circle"></div>
+								</div>
+							</div>
+							<label for="mode-structure-5">Structure 5</label>
+						</div>
+					</form>
+
+					<hr>
+							
+					<h1 class="mdc-typography--headline6">Саправка</h1>
+					<div class="mdc-typography--body1">
+						<i class="fa fa-cloud fa-lg" aria-hidden="true"></i> - Облачный сервис
+					</div>
+					<div class="mdc-typography--body1">
+						<i class="fa fa-hdd-o fa-lg" aria-hidden="true"></i> - База данных
+					</div>
+					<div class="mdc-typography--body1">
+						<i class="fa fa-server fa-lg" aria-hidden="true"></i> - Вычислительный модуль (СППР)
 					</div>
 				</div>
 			</div>
 		</div>
-		<script src="js/3lv_structure_core.js"></script>
-	</body>
+	</div>
+	<script src="js/3lv_structure_core.js"></script>
+</body>
 </html>

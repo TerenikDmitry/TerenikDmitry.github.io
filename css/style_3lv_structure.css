@@ -1,21 +1,14 @@
-#root{
-	width: 1200px;
-	margin: 0 auto;
+.mdc-layout-grid{
 	height: 100vh;
+	padding: 5vh;
 }
 
-
-.mdc-layout-grid__inner, .dekor, #main-diagram, .content{
+#main-diagram, .mdc-layout-grid__inner{
 	height: 100%;
 }
 
-.mdc-layout-grid{
-	height: 100vh;
-	padding: 7vh 0;
-}
-
 #settings{
-	padding: 0 1rem 8px;
+	padding: 0 1rem;
 }
 
 form{
