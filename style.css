@@ -4,7 +4,15 @@ html {
 	line-height: 1.5;
 	--dark-grey: #313131;
 	--lite-grey: #B0B0B0;
-	--link-color: #4F86C6; 
+/*	--link-color: #82bcff; 
+	--link-color-hover: #82ff86;
+	--main-color: #4c7dff;
+	--main2-color: #49cd4d; 
+	--back-color: #FFFFFF;*/
+	--link-color: #e67cf9; 
+	--link-color-hover: #fffb71;
+	--main-color: #5f026f;
+	--main2-color: #f5f31c; 
 	--back-color: #FFFFFF;
 }
 body {
@@ -14,12 +22,13 @@ body {
 }
 a{
 	text-decoration: none;
-	color: var(--link-color);
-	border-bottom: 1px solid var(--link-color);
+	transition: all ease .3s;
+	box-shadow: inset 0 -6px 0 var(--link-color);
+	color: inherit;
+	border-bottom: none !important;
 }
 a:hover {
-	background-color: var(--link-color);
-	color: var(--back-color);
+	box-shadow: inset 0 -6px 0 var(--link-color-hover);
 }
 p {
 	margin: 0 0 .5rem 0;
@@ -47,9 +56,11 @@ nav>div.menu>a {
 	margin-left: 2vh;
 }
 nav a {
-	color: var(--dark-color);
-	transition: all ease .3s;
-	border-bottom: 1px solid var(--back-color);
+	color: var(--main-color);
+	box-shadow: none;
+}
+nav a:hover {
+	box-shadow: inset 0 -6px 0 var(--main-color);
 }
 
 
@@ -58,30 +69,30 @@ main {
 	margin-bottom: 10vh;
 	font-size: 1.3rem;
 }
+.post{
+	padding: 2rem;
+	margin-bottom: 3rem;
+	box-shadow: 1px 5px 15px var(--lite-grey);
+}
 .post-date {
 	font-size: 1rem;
 	padding: 1vh;
 	display: inline-block;
-	color: var(--link-color);
-	border: 1px solid var(--link-color);
+	color: var(--back-color);
+	background-color: var(--main-color); 
 }
 .post-text {
 	margin: .5rem 0 2rem 0;
 }
-.contacts-link {
-	color: var(--link-color);
-	border-bottom: 1px solid var(--link-color);
-}
-.contacts-link:hover {
-	background-color: var(--link-color);
-	color: var(--back-color);;
+.post-text img{
+	width: 100%;
+	margin: 1rem 0;
 }
 
 
 
 footer {
 	font-size: 1rem;
-	border-top: 1px solid var(--lite-grey);
 	padding: 5vh 0; 
 }
 
