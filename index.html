@@ -1,55 +1,99 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="h-100">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 	<title>Тереник Дмитрий</title>
-	<link href="normalize.css" rel="stylesheet" type="text/css">
-	<link href="style.css" rel="stylesheet" type="text/css">
 	<link rel="icon" href="./favicon.ico">
 </head>
-<body>
-	<div class="site">
-		<header role="banner">
-			<nav role="navigation">
-				<a href="#">Тереник Дмитрий</a>
-				<div class="menu">
-					<a href="about.html">Обо мне</a>
-					<a href="contacts.html">Контакты</a>
+<body class="d-flex flex-column h-100">
+	<header class="mb-5 py-3 bg-dark">
+		<div class="container">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<a class="navbar-brand" href="#">Тереник Дмитрий</a>
+
+				<div class="collapse navbar-collapse" id="navbarToggler">
+					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">Обо мне</a>
+						</li>
+					</ul>
 				</div>
 			</nav>
-			<div>Веб-разработчик</div>
-		</header>
-		<main>
-			<div class="post">
-				<div class="post-date">13.06.2018</div>
-				<div class="post-text">
-					<p>"Тестовое задание"</p>
-					<p>Business card page (страничка-визитка) менеджера по продажам.</p>
-					<img src="img/hose.png">
-					<a href="porject_hose.html">Перейти на страничку</a>
-				</div>
+		</div>	
+	</header>	
+
+	<main role="main" class="container flex-shrink-0">
+		<div class="jumbotron">
+			<h1 class="display-4">My works! <span>&#128187;</span></h1>
+		</div>
+
+		<div class="card bg-light my-3">
+			<img src="img/hose.png" class="card-img-top border-bottom" alt="">
+			<div class="card-body">
+				<h3 class="card-title">Вёрстка по шаблону</h3>
+				<span class="badge badge-secondary mb-2 p-2">13.06.2018</span>
+				<p class="card-text">
+					Business card page (страничка-визитка) менеджера по продажам.
+				</p>
+				<p class="card-text">
+					Целью задания было попрактиковаться в вёрстке странички по шаблону (изображению).
+				</p>
+				<a href="porject_hose.html" class="card-link">Посмотреть</a>
 			</div>
-			<div class="post">
-				<div class="post-date">23.05.2018</div>
-				<div class="post-text">
-					<p>"Дипломный проект"</p>
-					<p>Симулятор трёхуровневой структуры нейронных модулей поддержки принятия решений (ППР) в медицинских учреждениях. Использование облачных технологий.</p>
-					<img src="img/3lv.png">
-					<a href="project_3lv_structure.html">Перейти на страничку</a>
-				</div>
+			<div class="card-footer">
+				<span class="badge badge-success p-2">#css</span>
+				<span class="badge badge-success p-2">#html</span>
 			</div>
-			<div class="post">
-				<div class="post-date">14.08.2017</div>
-				<div class="post-text">
-					<p>"Покерная раздача карт"</p>
-					<p>Раздаём пять(5) карт и проверяем максимальную покерную комбинацию.</p>
-					<p data-height="407" data-theme-id="light" data-slug-hash="Bdwdgj" data-default-tab="js,result" data-user="TereNIK" data-embed-version="2" data-pen-title="Покерная раздача карт" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/TereNIK/pen/Bdwdgj/">Покерная раздача карт</a> by Dmitry (<a href="https://codepen.io/TereNIK">@TereNIK</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-				</div>
+		</div>
+
+		<div class="card bg-light my-3">
+			<img src="img/3lv.png" class="card-img-top border-bottom" alt="">
+			<div class="card-body">
+				<h3 class="card-title">Дипломный проект <span>&#128216;</span></h3>
+				<span class="badge badge-secondary mb-2 p-2">23.05.2018</span>
+				<p class="card-text">
+					Симулятор трёхуровневой структуры нейронных модулей поддержки принятия решений (ППР) в медицинских учреждениях. Использование облачных технологий.
+				</p>
+				<a href="project_3lv_structure.html" class="card-link">Посмотреть</a>
 			</div>
-		</main>
-		<footer>2017-2018 Тереник Дмитрий</footer>
-	</div>
+			<div class="card-footer">
+				<span class="badge badge-success p-2">#js</span>
+			</div>
+		</div>
+
+		<div class="card bg-light my-5">
+			<div class="card-body">
+				<h3 class="card-title">Покерная раздача карт <span>&#127183;</span></h3>
+				<span class="badge badge-secondary mb-2 p-2">14.08.2017</span>
+				<p class="card-text">
+					Раздаём пять(5) карт и проверяем максимальную покерную комбинацию.
+				</p>
+				<p data-height="407" data-theme-id="light" data-slug-hash="Bdwdgj" data-default-tab="js,result" data-user="TereNIK" data-embed-version="2" data-pen-title="Покерная раздача карт" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/TereNIK/pen/Bdwdgj/">Покерная раздача карт</a> by Dmitry (<a href="https://codepen.io/TereNIK">@TereNIK</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+				<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+			</div>
+			<div class="card-footer">
+				<span class="badge badge-success p-2">#js</span>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer mt-auto py-5 bg-dark">
+		<div class="container">
+			<span class="text-muted">2017-2020 Тереник Дмитрий</span>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
