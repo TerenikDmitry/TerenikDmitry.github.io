@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Вероника Ростова | Менеджер по продажам</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+	<script type="text/javascript" src="./moment-with-locales.js"></script>
+
+	<link rel="icon" href="../../favicon.ico">
+</head>
+<body onload="main()">
+	<div class="main">
+		<div class="header">
+			<div class="header__info">
+				<img class="header__info-logo" src="./avatar.png">
+				<div class="header__info-title">
+					<div class="header__info-title-main">
+						Вероника Ростова
+					</div>
+					<div class="header__info-title-second">
+						Менеджер по продажам
+					</div>
+				</div>
+				<div class="header__info-description">
+					Подберу для вас самые лучшие предложения.<br> Мои услуги абсолютно бесплатны
+				</div>
+			</div>
+			<div class="header__services">
+				<table>
+					<tr class="table-top">
+						<th></th>
+						<th class="table_center">Услуг</th>
+					</tr>
+					<tr>
+						<td><div class="services-scale">Ручное бронирование</div></td>
+						<td class="table_cente services-value">11</td>
+					</tr>
+					<tr>
+						<td><div class="services-scale">Пакетные туры</div></td>
+						<td class="table_cente services-value">9</td>
+					</tr>
+					<tr>
+						<td><div class="services-scale">Отели</div></td>
+						<td class="table_cente services-value">23</td>
+					</tr>
+					<tr class="table-footer">
+						<td>Всего</td>
+						<td class="table_cente" id="services-sum"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="comments">
+			<div class="comments__info">
+				Последние отзывы 
+				<span class="comments__info-link"><a href="#">Все отзывы</a></span>
+				<span class="comments__info-ico">
+					<i class="fas fa-heart"></i> 131 
+					<i class="fas fa-comment-alt"></i> 14
+				</span>
+			</div>
+			<div class="comments__list" id="comments-data">
+				<div class="comments__list-item">
+					<div class="comments__list-title">
+						<div class="comments__list-title-name">Самуил Бол</div>
+						<div class="comments__list-title-date">13 октября 2011</div>
+					</div>
+					<div class="comments__list-comment">Привет, Верунь! ниче себе ты крутая. фотка класс!!!</div>
+				</div>
+				<div class="comments__list-item">
+					<div class="comments__list-title">
+						<div class="comments__list-title-name">Лилия Семёновна</div>
+						<div class="comments__list-title-date">14 октября 2011</div>
+					</div>
+					<div class="comments__list-comment">Нет никого, кто любил бы боль саму по себе, кто искал бы её и кто хотел бы иметь её просто потому, что это боль.</div>
+				</div>
+				<div class="comments__list-item">
+					<div class="comments__list-title">
+						<div class="comments__list-title-name">Катерина Большая</div>
+						<div class="comments__list-title-date">15 октября 2011</div>
+					</div>
+					<div class="comments__list-comment">Очень темный шоколад и арахисовый макияж. Свободный дом велит, в Соединенных Штатах. Платформа для целых морковных домов.</div>
+				</div>
+			</div>
+			<div class="comments__form">
+				<form>
+					<textarea name="comments-text" placeholder="Текст комментария..." id="comments-text"></textarea>
+					<button type="button" onclick="addComment()">Написать консультанту</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%; text-align: center; color: #484848; padding-top: 20px; font-size: .7rem;">2018 Тереник Дмитрий</div>
+	<script type="text/javascript" src="./comment-add.js"></script>
+</body>
+</html>
